@@ -16,6 +16,48 @@
 			"react-hot-loader/babel"
 		]
 	},
+	"eslintConfig": {
+		"parser": "babel-eslint",
+		"extends": [
+			"eslint:recommended",
+			"plugin:import/errors",
+			"plugin:import/warnings",
+			"plugin:react/recommended"
+		],
+		"parserOptions": {
+			"ecmaVersion": 6,
+			"sourceType": "module",
+			"ecmaFeatures": {
+				"jsx": true,
+				"modules": true
+			}
+		},
+		"plugins": [
+			"react",
+			"import"
+		],
+		"env": {
+			"es6": true,
+			"browser": true,
+			"node": true,
+			"jquery": true,
+			"mocha": true
+		},
+		"rules": {
+			"semi": [
+				"error",
+				"never"
+			],
+			"quotes": [
+				"error",
+				"single"
+			],
+			"indent": [
+				"error",
+				"tab"
+			]
+		}
+	},
 	"devDependencies": {
 		"babel-core": "^6.0.20",
 		"babel-eslint": "^6.1.2",
@@ -24,6 +66,7 @@
 		"babel-preset-react": "^6.0.15",
 		"babel-preset-stage-0": "^6.0.15",
 		"eslint": "^3.5.0",
+		"eslint-plugin-import": "^1.15.0",
 		"eslint-plugin-react": "^6.2.2",
 		"react-hot-loader": "^3.0.0-beta.4",
 		"webpack": "^2.1.0-beta.22",
