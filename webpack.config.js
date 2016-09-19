@@ -26,7 +26,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, 'dist'),
 		filename: '[name].js',
-		publicPath: '/static/'
+		publicPath: '/dist/'
 	},
 	plugins: process.env.NODE_ENV === 'production'
 		? [
@@ -43,7 +43,6 @@ module.exports = {
 		]
 	},
 	devServer: {
-		publicPath: '/static/',
 		hot: true,
 		historyApiFallback: true
 	}
