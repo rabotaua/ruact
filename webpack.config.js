@@ -6,12 +6,14 @@ process.env.NODE_ENV = process.argv.indexOf('-p') === -1 ? 'development' : 'prod
 module.exports = {
 	devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'eval',
 	entry: {
-		app1: [
-			'react-hot-loader/patch',
-			'webpack-dev-server/client?http://localhost:8080',
-			'webpack/hot/only-dev-server',
-			'./entry/app1'
-		]
+		app1: process.env.NODE_ENV === 'production'
+			? ['./entry/app1']
+			: [
+				'react-hot-loader/patch',
+				'webpack-dev-server/client?http://localhost:8080',
+				'webpack/hot/only-dev-server',
+				'./entry/app1'
+			]
 	},
 	output: {
 		path: path.join(__dirname, 'dist'),
@@ -23,7 +25,7 @@ module.exports = {
 	],
 	module: {
 		loaders: [
-			{test: /\.js$/, loaders: ['babel']}
+			{ test: /\.js$/, loaders: ['babel'] }
 		]
 	},
 	devServer: {
