@@ -8,7 +8,7 @@ process.env.NODE_ENV = process.argv.indexOf('-p') === -1 ? 'development' : 'prod
 var isProduction = process.env.NODE_ENV === 'production'
 
 var hot = isProduction ? [] : [
-	'react-hot-loader/patch',
+ 'react-hot-loader/patch',
 	'webpack-dev-server/client?http://localhost:8080',
 	'webpack/hot/only-dev-server'
 ]
