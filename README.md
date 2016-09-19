@@ -24,6 +24,14 @@ The main difference between this one and bazillion of other starter kits is that
 
 Note: if create react app project will accept latest patches from react hot loader then there is literally no need in this boilerplate.
 
+## WebStorm notes
+
+- Set up "JavaScript language version" to "React JSX" (File \ Settings... \ Languages & Frameworks \ JavaScript)
+- Turn off "Unterminated statement" inspection at (File \ Settings... \ Editor \ Inspections \ JavaScrtip \ Code style issues \ Unterminated statement)
+- Turn off "Method can be static" inspection at (File \ Settings... \ Editor \ Inspections \ JavaScrtip \ General \ Method can be static)
+- Enable eslint at File \ Settings... \ Languages & Frameworks \ JavaScript \ Code Quality Tools \ ESLint
+- Download and enalbe react and react-dom libraries from File \ Settins... \ JavaScripts \ Libraries
+
 ## TODO
 
 ### Style lint
