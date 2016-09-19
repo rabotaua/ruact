@@ -1,6 +1,25 @@
 @import 'commons';
 
 .title {
+	margin: 0;
+	padding: 0;
 	color: $color_main;
 	display: flex;
+	align-items: center;
+}
+
+.title:before,
+.title:after {
+	content: '';
+	flex: 1;
+	height: 1px;
+	background: $color_main;
+}
+
+.title:before {
+	margin-right: .5em;
+}
+
+.title:after {
+	margin-left: .5em;
 }

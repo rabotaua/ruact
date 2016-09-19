@@ -16,8 +16,8 @@ var hot = isProduction ? [] : [
 export default (app) => ({
 	devtool: isProduction ? 'source-map' : 'eval',
 	entry: {
-		app1: hot.concat(['./entry/app1']),
-		app2: hot.concat(['./entry/app2'])
+		timer: hot.concat(['./entry/timer']),
+		counter: hot.concat(['./entry/counter'])
 	},
 	output: {
 		path: path.join(__dirname, 'dist'),

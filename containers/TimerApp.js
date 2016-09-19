@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import Title from '../components/Title'
+import './TimerApp.scss'
 
-export default class Counter extends Component {
+export default class TimerApp extends Component {
 	constructor(props) {
 		super(props)
 		this.state = { counter: 0 }
@@ -11,9 +13,7 @@ export default class Counter extends Component {
 	}
 
 	tick() {
-		this.setState({
-			counter: this.state.counter + 1
-		})
+		this.setState({ counter: this.state.counter + 1 })
 	}
 
 	componentWillUnmount() {
@@ -21,9 +21,7 @@ export default class Counter extends Component {
 	}
 
 	render() {
-		return (
-			<h2>Counter: {this.state.counter}</h2>
-		)
+		const title = `Timer ${this.state.counter}`
+		return <Title title={title} />
 	}
 }
-

@@ -1,11 +1,11 @@
 import test from 'ava'
 import React from 'react'
-import App2 from './App2'
+import App from './CounterApp'
 import {mount} from 'enzyme'
 
 
 test.beforeEach(t => {
-	t.context = mount(<App2/>)
+	t.context = mount(<App/>)
 })
 
 test('has initial state', t => {
@@ -19,6 +19,5 @@ test('has button', t => {
 test('handles button click', t => {
 	const prev = t.context.state('counter')
 	t.context.find('button').simulate('click')
-	t.context.find('button').simulate('click')
-	t.is(t.context.state('counter'), prev + 2)
+	t.is(t.context.state('counter'), prev + 1)
 })
