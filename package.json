@@ -11,7 +11,7 @@
     "test": "ava",
     "test:watch": "ava --watch",
     "cover": "nyc ava",
-    "precommit": "npm run lint -s"
+    "precommit": "npm run lint"
   },
   "ava": {
     "files": [
