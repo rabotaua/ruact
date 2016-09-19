@@ -1,5 +1,5 @@
 import React from 'react'
-import './Title.css'
+import './Title.scss'
 
 const Title = ({title}) => <h1 className="title">{title}</h1>
 

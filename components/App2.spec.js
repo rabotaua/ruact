@@ -5,11 +5,11 @@ import {mount} from 'enzyme'
 
 
 test.beforeEach(t => {
-    t.context = mount(<App2/>)
+	t.context = mount(<App2/>)
 })
 
 test('has initial state', t => {
-    t.is(t.context.state('counter'), 0)
+	t.is(t.context.state('counter'), 0)
 })
 
 test('has button', t => {

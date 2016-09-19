@@ -2,6 +2,7 @@
   "globalDevDependencies": {
     "enzyme": "registry:dt/enzyme#2.4.1+20160919072335",
     "jsdom": "registry:dt/jsdom#2.0.0+20160906180921",
+    "node-sass": "registry:dt/node-sass#0.0.0+20160316155526",
     "react-addons-test-utils": "registry:dt/react-addons-test-utils#0.14.0+20160427035638"
   }
 }

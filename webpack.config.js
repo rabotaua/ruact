@@ -37,7 +37,7 @@ module.exports = {
 	module: {
 		loaders: [
 			{ test: /\.js$/, loaders: ['babel'] },
-			{ test: /\.css$/, loader: isProduction ? ExtractTextPlugin.extract({ fallbackLoader: 'style', loader: 'css!postcss' }) : 'style!css!postcss' }
+			{ test: /\.s?css$/, loader: isProduction ? ExtractTextPlugin.extract({ fallbackLoader: 'style', loader: 'css?sourceMap!postcss!sass?sourceMap' }) : 'style!css?sourceMap!postcss!sass?sourceMap' }
 		]
 	},
 	postcss: function () {

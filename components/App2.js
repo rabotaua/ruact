@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Title from './Title'
 import Button from './Button'
-import './App2.css'
+import './App2.scss'
 export default class App2 extends Component {
 	constructor() {
 		super()

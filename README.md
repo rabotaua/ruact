@@ -37,3 +37,14 @@ Update packages
 `ncu` will list available updates
 
 `ncu -u` will install them
+
+Libraries
+---------
+
+**Tests**
+
+ava - runner
+react-addons-test-utils - allow write unit tests for react components
+enzyme - makes react-addons-test-utils usable by adding jQuery like sugar
+jsdom - render into memory instead phantomjs, chrome
+nyc - coverage
