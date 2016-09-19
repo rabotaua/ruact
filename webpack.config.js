@@ -33,7 +33,8 @@ module.exports = {
 	,
 	module: {
 		loaders: [
-			{ test: /\.js$/, loaders: ['babel'] }
+			{ test: /\.js$/, loaders: ['babel'] },
+			{ test: /\.css$/, loaders: ['style', 'css'] }
 		]
 	},
 	devServer: {

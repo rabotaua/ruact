@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './App2.css'
 export default class App2 extends Component {
 	constructor(props) {
 		super(props)
