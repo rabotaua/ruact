@@ -81,8 +81,8 @@ Inject and provide sample for redux and router
 
 ava is chosen for its concurrency, react and es6 out of the box support
 
-[ava](https://github.com/avajs/ava) - runner
-[react-addons-test-utils](https://facebook.github.io/react/docs/test-utils.html) - allow write unit tests for react components (as site says toke a look at *enzyme*)
-[enzyme](http://airbnb.io/enzyme/) - makes *react-addons-test-utils* usable by adding jQuery like sugar
-[jsdom](https://github.com/tmpvar/jsdom) - render into memory instead of phantomjs or chrome
-[nyc](https://github.com/istanbuljs/nyc) - coverage
+- [ava](https://github.com/avajs/ava) - runner
+- [react-addons-test-utils](https://facebook.github.io/react/docs/test-utils.html) - allow write unit tests for react components (as site says toke a look at *enzyme*)
+- [enzyme](http://airbnb.io/enzyme/) - makes *react-addons-test-utils* usable by adding jQuery like sugar
+- [jsdom](https://github.com/tmpvar/jsdom) - render into memory instead of phantomjs or chrome
+- [nyc](https://github.com/istanbuljs/nyc) - coverage
