@@ -7,11 +7,16 @@
     "dist": "webpack -p",
     "lint:js": "eslint --ignore-path .gitignore .",
     "lint:css": "stylelint ./components/**/*.scss",
+    "lint:staged": "lint-staged",
     "lint": "npm run lint:js -s & npm run lint:css -s",
     "test": "ava",
     "test:watch": "ava --watch",
     "cover": "nyc ava",
-    "precommit": "npm run lint"
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": "lint:js",
+    "*.scss": "lint:css"
   },
   "ava": {
     "files": [
