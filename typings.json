@@ -1,0 +1,7 @@
+{
+  "globalDevDependencies": {
+    "enzyme": "registry:dt/enzyme#2.4.1+20160919072335",
+    "jsdom": "registry:dt/jsdom#2.0.0+20160906180921",
+    "react-addons-test-utils": "registry:dt/react-addons-test-utils#0.14.0+20160427035638"
+  }
+}

@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var autoprefixer = require('autoprefixer')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 process.env.NODE_ENV = process.argv.indexOf('-p') === -1 ? 'development' : 'production'
@@ -36,8 +37,11 @@ module.exports = {
 	module: {
 		loaders: [
 			{ test: /\.js$/, loaders: ['babel'] },
-			{ test: /\.css$/, loader: isProduction ? ExtractTextPlugin.extract({ fallbackLoader: 'style', loader: 'css' }) : 'style!css' }
+			{ test: /\.css$/, loader: isProduction ? ExtractTextPlugin.extract({ fallbackLoader: 'style', loader: 'css!postcss' }) : 'style!css!postcss' }
 		]
+	},
+	postcss: function () {
+		return [autoprefixer]
 	},
 	devServer: {
 		hot: true,
