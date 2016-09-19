@@ -5,7 +5,7 @@
 	"scripts": {
 		"start": "webpack-dev-server",
 		"dist": "webpack -p",
-		"lint": "eslint src"
+		"lint": "eslint --ignore-path .gitignore ."
 	},
 	"babel": {
 		"presets": [
