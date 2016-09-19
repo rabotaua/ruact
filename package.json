@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"start": "webpack-dev-server",
+		"dist": "webpack -p",
 		"lint": "eslint src"
 	},
 	"babel": {
