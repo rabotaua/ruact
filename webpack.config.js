@@ -13,6 +13,14 @@ module.exports = {
 				'webpack-dev-server/client?http://localhost:8080',
 				'webpack/hot/only-dev-server',
 				'./entry/app1'
+			],
+		app2: process.env.NODE_ENV === 'production'
+			? ['./entry/app2']
+			: [
+				'react-hot-loader/patch',
+				'webpack-dev-server/client?http://localhost:8080',
+				'webpack/hot/only-dev-server',
+				'./entry/app2'
 			]
 	},
 	output: {
