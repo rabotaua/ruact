@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 process.env.NODE_ENV = process.argv.indexOf('-p') === -1 ? 'development' : 'production'
 
@@ -24,7 +25,8 @@ module.exports = {
 	},
 	plugins: isProduction
 		? [
-			new webpack.optimize.CommonsChunkPlugin('commons')
+			new webpack.optimize.CommonsChunkPlugin('commons'),
+			new ExtractTextPlugin('[name].css')
 		]
 		: [
 			new webpack.HotModuleReplacementPlugin(),
@@ -34,7 +36,7 @@ module.exports = {
 	module: {
 		loaders: [
 			{ test: /\.js$/, loaders: ['babel'] },
-			{ test: /\.css$/, loaders: ['style', 'css'] }
+			{ test: /\.css$/, loader: isProduction ? ExtractTextPlugin.extract({ fallbackLoader: 'style', loader: 'css' }) : 'style!css' }
 		]
 	},
 	devServer: {

@@ -1,9 +1,10 @@
 import React from 'react'
+import Title from './Title'
 
 export default function Layout({ children }) {
 	return (
 		<div>
-			<h1>Hello, world!</h1>
+			<Title title="Hello, world!" />
 			{children}
 		</div>
 	)
