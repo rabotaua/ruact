@@ -1,3 +1,5 @@
+![dependencies](https://david-dm.org/rabotaua/ruact.svg) ![dev-dependencies](https://david-dm.org/rabotaua/ruact/dev-status.svg)
+
 # React StarterKit
 
 Sample playground for react project
