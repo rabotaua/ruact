@@ -3,25 +3,17 @@ var webpack = require('webpack')
 
 process.env.NODE_ENV = process.argv.indexOf('-p') === -1 ? 'development' : 'production'
 
+var hot = process.env.NODE_ENV === 'production' ? [] : [
+	'react-hot-loader/patch',
+	'webpack-dev-server/client?http://localhost:8080',
+	'webpack/hot/only-dev-server'
+]
+
 module.exports = {
 	devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'eval',
 	entry: {
-		app1: process.env.NODE_ENV === 'production'
-			? ['./entry/app1']
-			: [
-				'react-hot-loader/patch',
-				'webpack-dev-server/client?http://localhost:8080',
-				'webpack/hot/only-dev-server',
-				'./entry/app1'
-			],
-		app2: process.env.NODE_ENV === 'production'
-			? ['./entry/app2']
-			: [
-				'react-hot-loader/patch',
-				'webpack-dev-server/client?http://localhost:8080',
-				'webpack/hot/only-dev-server',
-				'./entry/app2'
-			]
+		app1: hot.concat(['./entry/app1']),
+		app2: hot.concat(['./entry/app2'])
 	},
 	output: {
 		path: path.join(__dirname, 'dist'),
