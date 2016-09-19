@@ -28,9 +28,15 @@ module.exports = {
 		filename: '[name].js',
 		publicPath: '/static/'
 	},
-	plugins: [
-		new webpack.HotModuleReplacementPlugin()
-	],
+	plugins: process.env.NODE_ENV === 'production'
+		? [
+			new webpack.optimize.CommonsChunkPlugin('commons')
+		]
+		: [
+			new webpack.HotModuleReplacementPlugin(),
+			new webpack.optimize.CommonsChunkPlugin('commons')
+		]
+	,
 	module: {
 		loaders: [
 			{ test: /\.js$/, loaders: ['babel'] }
