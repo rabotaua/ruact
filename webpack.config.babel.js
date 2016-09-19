@@ -1,7 +1,7 @@
-var path = require('path')
-var webpack = require('webpack')
-var autoprefixer = require('autoprefixer')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+import path from 'path'
+import webpack from 'webpack'
+import autoprefixer from 'autoprefixer'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 process.env.NODE_ENV = process.argv.indexOf('-p') === -1 ? 'development' : 'production'
 
@@ -13,7 +13,7 @@ var hot = isProduction ? [] : [
 	'webpack/hot/only-dev-server'
 ]
 
-module.exports = {
+export default (app) => ({
 	devtool: isProduction ? 'source-map' : 'eval',
 	entry: {
 		app1: hot.concat(['./entry/app1']),
@@ -45,6 +45,11 @@ module.exports = {
 	},
 	devServer: {
 		hot: true,
-		historyApiFallback: true
+		//historyApiFallback: true
+		historyApiFallback: {
+			rewrites: [
+				{ from: /.*/, to: `/entry/${app}.html` }
+			]
+		}
 	}
-}
+})

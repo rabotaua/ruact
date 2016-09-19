@@ -3,7 +3,9 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server",
+    "start:app1": "webpack-dev-server --env app1",
+    "start:app2": "webpack-dev-server --env app2",
+    "start": "npm run lint -s & npm run test -s & npm run dist -s",
     "dist": "webpack -p",
     "lint:js": "eslint --ignore-path .gitignore .",
     "lint:css": "stylelint ./components/**/*.scss",

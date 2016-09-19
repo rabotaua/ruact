@@ -3,12 +3,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App2 from '../components/App2'
 
-const app2 = document.getElementById('app2')
+const root = document.getElementById('root')
 ReactDOM.render(
 	<AppContainer>
 		<App2 />
 	</AppContainer>,
-	app2
+	root
 )
 
 if (module.hot) {
@@ -18,7 +18,7 @@ if (module.hot) {
 			<AppContainer>
 				<NextApp2 />
 			</AppContainer>,
-			app2
+			root
 		)
 	})
 }
