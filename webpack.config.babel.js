@@ -26,10 +26,12 @@ export default (app) => ({
 	},
 	plugins: isProduction
 		? [
+			new webpack.LoaderOptionsPlugin({options:{context:__dirname, postcss:[autoprefixer]}}),
 			new webpack.optimize.CommonsChunkPlugin('commons'),
 			new ExtractTextPlugin('[name].css')
 		]
 		: [
+			new webpack.LoaderOptionsPlugin({options:{context:__dirname, postcss:[autoprefixer]}}),
 			new webpack.HotModuleReplacementPlugin(),
 			new webpack.optimize.CommonsChunkPlugin('commons')
 		]
@@ -39,9 +41,6 @@ export default (app) => ({
 			{ test: /\.js$/, loaders: ['babel'] },
 			{ test: /\.s?css$/, loader: isProduction ? ExtractTextPlugin.extract({ fallbackLoader: 'style', loader: 'css?sourceMap!postcss!sass?sourceMap' }) : 'style!css?sourceMap!postcss!sass?sourceMap' }
 		]
-	},
-	postcss: function () {
-		return [autoprefixer]
 	},
 	devServer: {
 		hot: true,
