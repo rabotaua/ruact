@@ -1,8 +1,9 @@
-import { AppContainer } from 'react-hot-loader'
+import * as ReactHotLoader from 'react-hot-loader'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from '../containers/TimerApp'
 
+const AppContainer = ReactHotLoader.AppContainer
 const root = document.getElementById('root')
 
 ReactDOM.render(

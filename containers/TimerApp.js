@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Title from '../components/Title'
 import './TimerApp.scss'
 
-export default class TimerApp extends Component {
+export default class TimerApp extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = { counter: 0 }

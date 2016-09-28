@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Title from '../components/Title'
 import Button from '../components/Button'
 import './CounterApp.scss'
 
-export default class CounterApp extends Component {
+export default class CounterApp extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = { counter: 0 }

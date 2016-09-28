@@ -1,9 +1,7 @@
 import React from 'react'
 import './Button.scss'
 
-const Button = ({text, onClick}) => {
-	return <button className="button" onClick={onClick}>{text}</button>
-}
+const Button = ({text, onClick}) => <button className="button" onClick={onClick}>{text}</button>
 
 Button.propTypes = {
 	text: React.PropTypes.string.isRequired,
