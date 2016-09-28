@@ -36,6 +36,10 @@ Note: if create react app project will accept latest patches from react hot load
 
 ## TODO
 
+### Provide redux samples for todo app
+
+http://jsonplaceholder.typicode.com/ - may be used as back end
+
 ### Style lint
 
 make [rules](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/rules.md) decisions

@@ -91,7 +91,17 @@
       ],
       "indent": [
         "error",
-        "tab"
+        "tab",
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "arrow-spacing": [
+        "error",
+        {
+          "before": true,
+          "after": true
+        }
       ]
     }
   },
@@ -157,7 +167,11 @@
     "webpack-dev-server": "2.1.0-beta.5"
   },
   "dependencies": {
+    "axios": "^0.14.0",
     "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react-dom": "^15.0.1",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0"
   }
 }
